@@ -1,6 +1,7 @@
+<!-- html components with data bindings -->
 <div class="m-3">
   <app-reg-form (NewDoctorEvent)="handleNewDoctor($event)"></app-reg-form>
-  <app-search-form></app-search-form>
+  <app-search-form [DoctorListMain]="DoctorsListMain"></app-search-form>
   <app-listview
     [DoctorListMain]="DoctorsListMain"
     (RegEvent)="handleEvent($event)"

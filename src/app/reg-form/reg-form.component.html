@@ -1,6 +1,9 @@
+<!-- registration form -->
 <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+  <!-- form header -->
   <h3 class="font-bold pb-1">Register New Doctor</h3>
   <div class="grid grid-cols-3 gap-11 pb-2 pl-2">
+    <!-- form contents -->
     <div class="flex flex-col">
       <label for="name" class="pb-1">Name </label>
       <input
@@ -9,6 +12,7 @@
         formControlName="name"
         class="p-2 flex-none bg-stone-300 rounded-lg"
       />
+      <!-- error message -->
       <div
         *ngIf="
           myForm.controls['name'].invalid &&

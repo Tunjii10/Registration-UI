@@ -17,10 +17,15 @@ export class ListviewComponent implements OnInit {
   }
   DoctorsList: any = [];
 
+  // url
   url = 'https://jsonplaceholder.typicode.com/users ';
+
+  //  on intialize fetch
   ngOnInit(): void {
     this.loadList();
   }
+
+  // fetch doctors list
   loadList() {
     return this.api.getDoctors(this.url).subscribe((data) => {
       this.DoctorsList = data;
@@ -28,6 +33,7 @@ export class ListviewComponent implements OnInit {
     });
   }
 
+  // emit event to parent component
   sendEvent(): void {
     this.RegEvent.emit(this.DoctorsList);
   }

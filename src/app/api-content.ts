@@ -1,3 +1,4 @@
+// interface for api data
 export class ApiContent {
   'id'?: number;
   'name': string;

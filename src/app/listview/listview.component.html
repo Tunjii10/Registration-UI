@@ -1,8 +1,10 @@
+<!-- List of doctors -->
 <div>
   <h3 class="font-bold pb-1 pt-4">Doctor List</h3>
-  <div class="bg-stone-300 rounded-md p-2">
+  <div class="overflow-scroll">
     <ng-container *ngIf="DoctorListMain.length !== 0">
-      <table class="w-full table-auto">
+      <!-- header -->
+      <table class="w-full table-auto bg-stone-300 rounded-md p-2">
         <thead>
           <tr>
             <td class="py-3">Name</td>
@@ -13,6 +15,7 @@
             <td class="py-3">Website</td>
           </tr>
         </thead>
+        <!-- body -->
         <tbody>
           <tr *ngFor="let doctors of DoctorListMain" class="">
             <td class="py-3">{{ doctors.name }}</td>

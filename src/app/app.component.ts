@@ -12,6 +12,8 @@ export class AppComponent {
     people: 'yes',
   };
   DoctorsListMain: any = [];
+
+  // event handlers
   handleEvent(event: ApiContent) {
     this.DoctorsListMain = event;
   }

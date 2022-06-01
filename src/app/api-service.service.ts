@@ -15,13 +15,13 @@ export class ApiServiceService {
       'Content-Type': 'application/json',
     }),
   };
-
+  // get request
   getDoctors(url: string): Observable<ApiContent> {
     return this.http
       .get<ApiContent>(url)
       .pipe(retry(1), catchError(this.handleError));
   }
-
+  // habdle error
   handleError(error: any) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {

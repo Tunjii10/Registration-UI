@@ -8,6 +8,7 @@ import { ApiContent } from '../api-content';
   styleUrls: ['./reg-form.component.scss'],
 })
 export class RegFormComponent implements OnInit {
+  // form grouping with validators
   myForm = this.fb.group({
     name: ['', Validators.required],
     username: ['', Validators.required],
@@ -23,6 +24,7 @@ export class RegFormComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  // submit event
   onSubmit(myForm: FormGroup) {
     if (myForm.valid) {
       const bodyContent = {
