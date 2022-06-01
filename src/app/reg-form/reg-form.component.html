@@ -1,0 +1,129 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+  <h3 class="font-bold pb-1">Register New Doctor</h3>
+  <div class="grid grid-cols-3 gap-11 pb-2 pl-2">
+    <div class="flex flex-col">
+      <label for="name" class="pb-1">Name </label>
+      <input
+        id="name"
+        type="text"
+        formControlName="name"
+        class="p-2 flex-none bg-stone-300 rounded-lg"
+      />
+      <div
+        *ngIf="
+          myForm.controls['name'].invalid &&
+          (myForm.controls['name'].dirty || myForm.controls['name'].touched)
+        "
+        class="text-sm text-red-500"
+      >
+        Name Required.
+      </div>
+    </div>
+
+    <div class="flex flex-col">
+      <label for="username" class="pb-1">Username </label>
+      <input
+        id="username"
+        type="text"
+        formControlName="username"
+        class="p-2 flex-none bg-stone-300 rounded-lg"
+      />
+      <div
+        *ngIf="
+          myForm.controls['username'].invalid &&
+          (myForm.controls['username'].dirty ||
+            myForm.controls['username'].touched)
+        "
+        class="text-sm text-red-500"
+      >
+        Username Required.
+      </div>
+    </div>
+
+    <div class="flex flex-col">
+      <label for="email" class="pb-1">Email </label>
+      <input
+        id="email"
+        type="text"
+        formControlName="email"
+        class="p-2 flex-none bg-stone-300 rounded-lg"
+      />
+      <div
+        *ngIf="
+          myForm.controls['email'].invalid &&
+          (myForm.controls['email'].dirty || myForm.controls['email'].touched)
+        "
+        class="text-sm text-red-500"
+      >
+        Valid Email Required.
+      </div>
+    </div>
+
+    <div class="flex flex-col">
+      <label for="phone" class="pb-1">Phone </label>
+      <input
+        id="phone"
+        type="text"
+        formControlName="phone"
+        class="p-2 flex-none bg-stone-300 rounded-lg"
+      />
+      <div
+        *ngIf="
+          myForm.controls['phone'].invalid &&
+          (myForm.controls['phone'].dirty || myForm.controls['phone'].touched)
+        "
+        class="text-sm text-red-500"
+      >
+        Valid Number Required.
+      </div>
+    </div>
+
+    <div class="flex flex-col">
+      <label for="city" class="pb-1">City </label>
+      <input
+        id="city"
+        type="text"
+        formControlName="city"
+        class="p-2 flex-none bg-stone-300 rounded-lg"
+      />
+      <div
+        *ngIf="
+          myForm.controls['city'].invalid &&
+          (myForm.controls['city'].dirty || myForm.controls['city'].touched)
+        "
+        class="text-sm text-red-500"
+      >
+        City Required.
+      </div>
+    </div>
+
+    <div class="flex flex-col">
+      <label for="website" class="pb-1">Website </label>
+      <input
+        id="website"
+        type="text"
+        formControlName="website"
+        class="p-2 flex-none bg-stone-300 rounded-lg"
+      />
+      <div
+        *ngIf="
+          myForm.controls['website'].invalid &&
+          (myForm.controls['website'].dirty ||
+            myForm.controls['website'].touched)
+        "
+        class="text-sm text-red-500"
+      >
+        Website Required.
+      </div>
+    </div>
+  </div>
+
+  <div class="flex justify-end mt-9">
+    <button
+      class="w-1/5 place-self-center bg-stone-500 hover:bg-stone-700 rounded-lg py-2"
+      type="submit"
+    >
+      Register
+    </button>
+  </div>
+</form>

@@ -1,0 +1,29 @@
+<div>
+  <h3 class="font-bold pb-1 pt-4">Doctor List</h3>
+  <div class="bg-stone-300 rounded-md p-2">
+    <ng-container *ngIf="DoctorListMain.length !== 0">
+      <table class="w-full table-auto">
+        <thead>
+          <tr>
+            <td class="py-3">Name</td>
+            <td class="py-3">Username</td>
+            <td class="py-3">Email</td>
+            <td class="py-3">Phone</td>
+            <td class="py-3">City</td>
+            <td class="py-3">Website</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let doctors of DoctorListMain" class="">
+            <td class="py-3">{{ doctors.name }}</td>
+            <td class="py-3">{{ doctors.username }}</td>
+            <td class="py-3">{{ doctors.email }}</td>
+            <td class="py-3">{{ doctors.phone }}</td>
+            <td class="py-3">{{ doctors.address.city }}</td>
+            <td class="py-3">{{ doctors.website }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </ng-container>
+  </div>
+</div>
